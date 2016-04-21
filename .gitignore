@@ -1,0 +1,8 @@
+**.DS_Store
+**.pyc
+**.sqlite3
+src/config/config.py
+globals.py
+**.json
+venv/
+htmlcov/
