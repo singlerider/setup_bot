@@ -37,11 +37,10 @@ class Bot(object):
 
     def whisper(self, username, message):
         message = str(message.lstrip("!"))
-        resp = rive.Conversation(self).run(username, message)[:350]
-        # self.save_message(username, "WHISPER", message)
+        resp = rive.Conversation(self).run(username, message)
         if resp:
+            resp = resp[:350]
             print "!->", resp
-            # self.save_message(BOT_USER, "WHISPER", resp)
             self.IRC.send_whisper(username, str(resp))
             return
 

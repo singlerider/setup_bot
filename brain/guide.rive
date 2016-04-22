@@ -1,0 +1,30 @@
+! version = 2.00
+
+// This file tests topic inclusions and inheritence:
+//
+// includes: this means that the topic "includes" the triggers present
+//           in another topic. Matching triggers in the source and included
+//           topic are possible, and the *reply* in the source topic overrides
+//           the reply in the included topic.
+// inherits: all triggers in the source topic have higher matching priority than
+//           all triggers in the inherited topic. So if the source topic has a
+//           trigger of simply *, it means NO triggers can possibly match on the
+//           inherited topic, because '*' goes higher in the match list.
+
+// This gets us into the process.
++ help
+- Whoa! You've found me! My sole reason for existing is helping you out. {topic=lobby}{@lobby}
+
+// Global triggers available on Earth
+> topic lobby
+
+	+ lobby
+	- Welcome to the lobby!
+	^ Type "help" again to learn what I can do for you.
+
+	+ help
+	- Commands that might be helpful:
+	^ "first time" - I'll walk you through setup, no prob.
+	^ "question" - Got a question? Let's see if I can help.
+
+< topic
