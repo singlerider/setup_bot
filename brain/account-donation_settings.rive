@@ -1,0 +1,20 @@
+! version = 2.00
+
+> topic donation_settings
+
+  + help
+  - You can access your donations settings dashboard at http://www.twitchalerts.com/dashboard/donation-settings -\s
+  ^ What would you like to know about donation settings?
+
+	+ [*] (connect|paypal|email|account) [*]
+  - You must connect your PayPal accont to receive funds. You can do this from\s
+  ^ your Donation Settings dashboard found at http://www.twitchalerts.com/dashboard/donation-settings.
+
+  + [*] (page|site|link) [*]
+  - Your donation page, assuming you're connected with TwitchAlerts can\s
+  ^ be found at https://www.twitchalerts.com/donate/<call>get_name</call>
+
+	+ (home|lobby)
+	- {topic=lobby}{@lobby}
+
+< topic

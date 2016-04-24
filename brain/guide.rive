@@ -11,6 +11,7 @@
 //           trigger of simply *, it means NO triggers can possibly match on the
 //           inherited topic, because '*' goes higher in the match list.
 
+
 > object get_name python
     username = rs.current_user()
     return username
@@ -20,7 +21,6 @@
 + *
 - Whoa! You've found me! My sole reason for existing is helping you out. {topic=lobby}{@lobby}
 
-// Global triggers available on Earth
 > topic lobby
 
 	+ lobby
@@ -29,11 +29,7 @@
 
 	+ help
 	- Commands that might be helpful:\s
-	^ "first time" - I'll walk you through setup, no prob.\s
 	^ "question" - Got a question? Let's see if I can help.\s
-
-	+ [*] first time [*]
-	- {topic=lobby}{@help}
 
 	+ [*] question [*]
 	- {topic=question}{@help}
@@ -48,40 +44,25 @@
 	- Ask away!
 	- Tell me what you need!
 
-	+ [*] (alert box|alert|box) [*]
+	//acount
+	+ [*] dashboard [*]
+	- {topic=dashboard}{@help}
+
+	+ [*] (setting|settings|currency|type|min|max|minimum|maximum) [*]
+	- {topic=donation_settings}{@help}
+
+	+ [*] (paypal|link|account) [*]
+	- {topic=donation_settings}{@paypal}
+
+	+ [*] (donation|donations|donor|donors|tip|tips) [*]
+	- {topic=my_donations}{@help}
+
+	+ [*] (subscribers|subs|subscriber|sub) [*]
+	- {topic=my_subscribers}{@help}
+
+	// widgets
+	+ [*] (alert|box|alerts) [*]
 	- {topic=alert_box}{@help}
-
-	+ (home|lobby)
-	- {topic=lobby}{@lobby}
-
-< topic
-
-> topic alert_box
-
-	+ help
-	- You can access your dashboard at http://www.twitchalerts.com/dashboard/alert-box-v3What\s
-	^ would you like to know about your Alert Box?
-
-	+ [*] (obs|open broadcast software|open broadcaster software) [classic]
-	- Check out our tutorial for OBS Classic at https://www.youtube.com/watch?v=JvX5rpEMeew
-
-	+ [*] (obs|open broadcast software|open broadcaster software) studio
-	- Check out our tutorial for OBS Studio at https://www.youtube.com/watch?v=yffHVAPHR2w
-
-	+ [*] xsplit [*]
-	- Checkout our tutorial for XSplit at https://www.youtube.com/watch?v=w058zjHfAW0
-
-	+ [*] test [*]
-	- You can send test alerts for follows, subscriptions, donations, and hosts\s
-	^ from your dashboard -\s
-	^ Your widget must be open for this to work (click "Launch" on the dashboard).\s
-	^ Type in your streaming software (OBS Classic/Studio, Xsplit) if you'd like more information:\s
-
-	+ [*] (media|share|media share|video|sharing|media sharing) [*]
-	- For a full explanation of media sharing, check out https://www.youtube.com/watch?v=aJKzVXnY5DU -\s
-	^ You can set a minimum donation amount, volume, price per second, and max\s
-	^ duration of the media being played. Don't worry, you can always skip a clip\s
-	^ if you'd like!
 
 	+ (home|lobby)
 	- {topic=lobby}{@lobby}

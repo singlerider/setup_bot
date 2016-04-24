@@ -1,0 +1,25 @@
+! version = 2.00
+
+> topic dashboard
+
+  + help
+  - You can access your dashboard at http://www.twitchalerts.com/dashboard/ -\s
+  ^ How can I help with your dashboard?
+
+	+ [*] (count|counts|top|high|highest|biggest|top|d) [*]
+  - You can track your follower count by day, week, month, or year. These are\s
+  ^ only estimations (follows and subs). TwitchAlerts must have been active during these events\s
+  ^ in  order to see them!
+
+  + [*] (recent|event|events|new|newest) [*]
+  - We track events (follows, subs, and donations) as they happen. You can visualize them with our Event List\s
+  ^ widget. If you'd like to know more about the event list, just ask me about it\s
+  ^ from here:
+
+  + [*] event list [*]
+  - {topic=event_list}{@help}
+
+	+ (home|lobby)
+	- {topic=lobby}{@lobby}
+
+< topic

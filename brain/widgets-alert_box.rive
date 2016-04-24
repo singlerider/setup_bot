@@ -1,0 +1,32 @@
+! version = 2.00
+
+> topic alert_box
+
+	+ help
+	- You can access your dashboard at http://www.twitchalerts.com/dashboard/alert-box-v3 -\s
+	^ What would you like to know about your Alert Box?
+
+	+ [*] (obs|open broadcast software|open broadcaster software) [classic]
+	- Check out our tutorial for OBS Classic at https://www.youtube.com/watch?v=JvX5rpEMeew
+
+	+ [*] (obs|open broadcast software|open broadcaster software) studio [*]
+	- Check out our tutorial for OBS Studio at https://www.youtube.com/watch?v=yffHVAPHR2w
+
+	+ [*] xsplit [*]
+	- Check out our tutorial for XSplit at https://www.youtube.com/watch?v=w058zjHfAW0
+
+	+ [*] (test|tests|donation|donations|follow|follows|follower|followers|sub|subs|subscription|subscriptions|subscriber|subscribers|donation|donations|host|hosts) [*]
+	- You can send test alerts for follows, subscriptions, donations, and hosts\s
+	^ from your dashboard - Your widget must be open for this to work (click "Launch" on the dashboard).\s
+	^ Type in your streaming software (OBS Classic/Studio, Xsplit) if you'd like more information:\s
+
+	+ [*] (media|share|video|sharing) [*]
+	- For a full explanation of media sharing, check out https://www.youtube.com/watch?v=aJKzVXnY5DU -\s
+	^ You can set a minimum donation amount, volume, price per second, and max\s
+	^ duration of the media being played. Don't worry, you can always skip a clip\s
+	^ if you'd like!
+
+	+ (home|lobby)
+	- {topic=lobby}{@lobby}
+
+< topic

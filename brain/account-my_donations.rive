@@ -1,0 +1,39 @@
+! version = 2.00
+
+> topic my_donations
+
+  + help
+  - You can access your donations dashboard at http://www.twitchalerts.com/dashboard/donations/ -\s
+  ^ How can I help with your donations?
+
+	+ [*] (name|names|top|high|highest|biggest|top|d|donation|donor|donations|donors) [*]
+  - You can view a list of donations at http://www.twitchalerts.com/dashboard/donations\s
+  ^ and the top donators at http://www.twitchalerts.com/dashboard/donations/donors
+
+  + [*] (export|save|csv|comma separated values|list|file) [*]
+  - You can "export" a list of donations to file by clicking our Export to CSV\s
+  ^ button from your donations dashboard!
+
+  + [*] (ban|banned) [*]
+  - Banned users are based on specific usernames that a donor types as they\s
+  ^ enter in their donation information. You can check out a list of all banned\s
+  ^ donors at http://www.twitchalerts.com/dashboard/donations/banned-donors
+
+  + [*] (recent|new|newest) [*]
+  - We track donations as they happen. You can visualize them with our Event List\s
+  ^ widget. If you'd like to know more about the event list, just ask me about it\s
+  ^ from here:
+
+  + [*] (setting|settings|paypal|email) [*]
+  - {topic=donation_settings}{@help}
+
+  + [*] (alert|alerts|show) [*]
+  - {topic=alert_box}{@help}
+
+  + [*] event list [*]
+  - {topic=event_list}{@help}
+
+	+ (home|lobby)
+	- {topic=lobby}{@lobby}
+
+< topic

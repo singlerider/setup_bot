@@ -1,0 +1,22 @@
+! version = 2.00
+
+> topic my_subscribers
+
+  + help
+  - Subscriptions are a benefit ow Twitch partnership. You can learn more about\s
+  ^ the Partner Program at https://www.twitch.tv/p/partnerfaq -\s
+  ^ You can access your subscriber dashboard at http://www.twitchalerts.com/dashboard/subscribers -\s
+  ^ What would you like to know about your subscriber dashboard?
+
+  + [*] (recent|new|newest) [*]
+  - We track subscriptions as they happen. You can visualize them with our Event List\s
+  ^ widget. If you'd like to know more about the event list, just ask me about it\s
+  ^ from here:
+
+  + [*] event list [*]
+  - {topic=event_list}{@help}
+
+	+ (home|lobby)
+	- {topic=lobby}{@lobby}
+
+< topic
