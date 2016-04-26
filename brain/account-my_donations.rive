@@ -3,12 +3,12 @@
 > topic my_donations
 
   + help
-  - You can access your donations dashboard at http://www.twitchalerts.com/dashboard/donations/ -\s
+  - You can access your donations dashboard at twitchalerts.com/dashboard/donations/ -\s
   ^ How can I help with your donations?
 
 	+ [*] (name|names|top|high|highest|biggest|top|d|donation|donor|donations|donors) [*]
-  - You can view a list of donations at http://www.twitchalerts.com/dashboard/donations\s
-  ^ and the top donators at http://www.twitchalerts.com/dashboard/donations/donors
+  - You can view a list of donations at twitchalerts.com/dashboard/donations\s
+  ^ and the top donators at twitchalerts.com/dashboard/donations/donors
 
   + [*] (export|save|csv|comma separated values|list|file) [*]
   - You can "export" a list of donations to file by clicking our Export to CSV\s
@@ -17,7 +17,7 @@
   + [*] (ban|banned) [*]
   - Banned users are based on specific usernames that a donor types as they\s
   ^ enter in their donation information. You can check out a list of all banned\s
-  ^ donors at http://www.twitchalerts.com/dashboard/donations/banned-donors
+  ^ donors at twitchalerts.com/dashboard/donations/banned-donors
 
   + [*] (recent|new|newest) [*]
   - We track donations as they happen. You can visualize them with our Event List\s
@@ -29,6 +29,9 @@
 
   + [*] (alert|alerts|show) [*]
   - {topic=alert_box}{@help}
+
+  + [*] [donation] (bar|goal|bars|goals) [*]
+  - {topic=donation_goal_settings}{@help}
 
   + [*] event list [*]
   - {topic=event_list}{@help}

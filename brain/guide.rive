@@ -19,22 +19,8 @@
 
 // This gets us into the process.
 + *
-- Whoa! You've found me! My sole reason for existing is helping you out. {topic=lobby}{@lobby}
-
-> topic lobby
-
-	+ lobby
-	- Welcome to the lobby <call>get_name</call>!\s
-	^ Type "help" to learn what I can do for you.
-
-	+ help
-	- Commands that might be helpful:\s
-	^ "question" - Got a question? Let's see if I can help.\s
-
-	+ [*] question [*]
-	- {topic=question}{@help}
-
-< topic
+- Whoa! You've found me! My sole reason for existing is helping you out.\s
+^ Never give your TwitchAlerts or Twitch password to anyone. {topic=lobby}{@lobby}
 
 > topic question
 
@@ -60,11 +46,32 @@
 	+ [*] (subscribers|subs|subscriber|sub) [*]
 	- {topic=my_subscribers}{@help}
 
+	+ [*] goal [*]
+	- {topic=donation_goal_settings}{@help}
+
 	// widgets
 	+ [*] (alert|box|alerts) [*]
 	- {topic=alert_box}{@help}
 
+	+ [*] (stream|streams|label|labels) [*]
+	- {topic=stream_labels}{@help}
+
 	+ (home|lobby)
 	- {topic=lobby}{@lobby}
+
+< topic
+
+> topic lobby inherits question
+
+	+ lobby
+	- Welcome to the lobby <call>get_name</call>!\s
+	^ Type "help" to learn what I can do for you.
+
+	+ help
+	- Commands that might be helpful:\s
+	^ "question" - Got a question? Let's see if I can help.
+
+	+ [*] (question|axe|ask|wonder|wondering|frustrate|frustrated|frustrating) [*]
+	- {topic=question}{@help}
 
 < topic

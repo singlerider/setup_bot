@@ -1,0 +1,16 @@
+! version = 2.00
+
+> topic stream_labels
+
+	+ help
+	- You can access stream labels at twitchalerts.com/dashboard/stream-labels -\s
+	^ Stream Labels is a Google Chrome App that allows you to easily manage the\s
+  ^ way messages get displayed on your stream! Can I answer any questions about them?
+
+  + [*] (video|tutorial|youtube|about|info|information) [*]
+  - There is an informational video that can be watched at youtu.be/GRnRbxbnUjk
+
+	+ (home|lobby)
+	- {topic=lobby}{@lobby}
+
+< topic

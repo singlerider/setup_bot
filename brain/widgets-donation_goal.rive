@@ -1,0 +1,26 @@
+! version = 2.00
+
+> topic donation_goal_widget
+
+	+ help
+	- You can access your donation goal widget at twitchalerts.com/dashboard/widget-settings/donation-goal -\s
+	^ You must have a donation goal set for the widget to operate. Ask me about "settings"\s
+  ^ If you'd like to know where to do add one. Or, ask me anything else about donatoin goals!
+
+  + [*] (color|colors) [*]
+  - Colors for the components of your donation goal bar can be configured using\s
+  ^ hex color codes (example: #00CC66). You can adjust the slider bars to make things easier!\s
+  ^ Changes are visibly applied after clicking "Save Settings" and refreshing the page.
+
+  + [*] (layout|style|type|kind|condense|condensed|standard) [*]
+  - You can select either "Standard" or "Condensed" as the Layout type. You can\s
+  ^ adjust the bar thickness, font styles and typeface (we get our from Google Fonts),\s
+  ^ and we offer a "Suggest" button for that perfect complimentary color.
+
+  + [*] (setting|settings) [*]
+  - {topic=donation_goal_settings}{@help}
+
+	+ (home|lobby)
+	- {topic=lobby}{@lobby}
+
+< topic

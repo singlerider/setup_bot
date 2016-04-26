@@ -1,0 +1,15 @@
+! version = 2.00
+
+> topic donation_goal_settings
+
+  + help
+  - You can access your donation goal settings at twitchalerts.com/dashboard/donation-goal -\s
+  ^ If you'd like to know more about the widget, just type "widget":
+
+  + [*] (widget|widgets) [*]
+  - {topic=donation_goal_widget}{@help}
+
+	+ (home|lobby)
+	- {topic=lobby}{@lobby}
+
+< topic

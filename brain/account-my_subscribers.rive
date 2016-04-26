@@ -4,8 +4,8 @@
 
   + help
   - Subscriptions are a benefit ow Twitch partnership. You can learn more about\s
-  ^ the Partner Program at https://www.twitch.tv/p/partnerfaq -\s
-  ^ You can access your subscriber dashboard at http://www.twitchalerts.com/dashboard/subscribers -\s
+  ^ the Partner Program at twitch.tv/p/partnerfaq -\s
+  ^ You can access your subscriber dashboard at twitchalerts.com/dashboard/subscribers -\s
   ^ What would you like to know about your subscriber dashboard?
 
   + [*] (recent|new|newest) [*]

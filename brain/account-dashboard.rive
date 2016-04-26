@@ -3,7 +3,7 @@
 > topic dashboard
 
   + help
-  - You can access your dashboard at http://www.twitchalerts.com/dashboard/ -\s
+  - You can access your dashboard at twitchalerts.com/dashboard/ -\s
   ^ How can I help with your dashboard?
 
 	+ [*] (count|counts|top|high|highest|biggest|top|d) [*]
