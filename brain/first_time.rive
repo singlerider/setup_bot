@@ -1,0 +1,49 @@
+! version = 2.00
+
+> topic first_time
+
+  + help
+  - Don't worry. I've got your back. I'd like to make this as easy as possible for you.\s
+  ^ Every time we finish a step, just say "next" and we'll continue.\s
+  ^ If you get lost, I'll give you an id (just say "id [number]") for each room so you can come back!\s
+  ^ When you're ready, say "next"
+
+  + [*] next [*]
+  - {topic=1}{@help}
+
+  + (home|lobby)
+	- {topic=lobby}{@lobby}
+
+  + id *
+  - {topic=<star>}{@help}
+
+< topic
+
+> topic 1
+
+  + help
+  - id 1 - First thing's first! Let's connect your PayPal.
+
+  + [*] next [*]
+  - {topic=2}{@help}
+
+  + (home|lobby)
+	- {topic=lobby}{@lobby}
+
+  + id *
+  - {topic=<star>}{@help}
+
+< topic
+
+> topic 2
+
+  + help
+  - 2
+
+  + (home|lobby)
+	- {topic=lobby}{@lobby}
+
+  + id *
+  - {topic=<star>}{@help}
+
+< topic

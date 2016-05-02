@@ -37,7 +37,8 @@ class Bot(object):
 
     def whisper(self, username, message):
         message = str(message.lstrip("!"))
-        resp = rive.Conversation(self).run(username, message)
+        resp = rive.Conversation(self).run(username.strip(), message)
+        print [username]
         if resp:
             resp = resp[:350]
             print "!->", resp
