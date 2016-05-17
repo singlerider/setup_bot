@@ -22,9 +22,6 @@
 - Whoa! You've found me! My sole reason for existing is helping you out.\s
 ^ Never give your TwitchAlerts or Twitch password to anyone. {topic=lobby}{@lobby}
 
-+ id *
-- {topic=<star>}{@help}
-
 > topic question
 
 	+ help
@@ -66,6 +63,9 @@
   - We don't take a fee from any of your donations and never will! PayPal and our credit card\s
   ^ vendor(s) have charges for their services (https://www.paypal.com/webapps/mpp/paypal-fees)
 
+  + id *
+  - {topic=<star>}{@help}
+
 < topic
 
 > topic lobby inherits question
@@ -76,7 +76,8 @@
 
 	+ help
 	- Commands that might be helpful:\s
-	^ "question" - Got a question? Let's see if I can help.
+	^ "question" - Got a question? Let's see if I can help.\s
+  ^ "first time setup" - I'll walk you through everything you need!
 
 	+ [*] (question|axe|ask|wonder|wondering|frustrate|frustrated|frustrating) [*]
 	- {topic=question}{@help}

@@ -16,7 +16,6 @@ class Conversation(Thread):
 
     def run(self, username, message):
         reply = bot.reply(username, message)
-        print [username]
         if reply == "[ERR: No reply matched]":
             return
         return str(reply)

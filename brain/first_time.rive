@@ -1,49 +1,151 @@
 ! version = 2.00
 
-> topic first_time
+> topic base
+
+  + *
+  - When you're done, say "next" and we'll continue. You can also say "id NUMBER" or "home"/"lobby"
+
+  + (home|lobby)
+  - {topic=lobby}{@lobby}
+
+  + id *
+  - {topic=<star>}{@help}
+
+< topic
+
+> topic first_time inherits base
 
   + help
   - Don't worry. I've got your back. I'd like to make this as easy as possible for you.\s
   ^ Every time we finish a step, just say "next" and we'll continue.\s
-  ^ If you get lost, I'll give you an id (just say "id [number]") for each room so you can come back!\s
+  ^ If you get lost, I'll give you an id (just say "id NUMBER") for each room so you can come back!\s
   ^ When you're ready, say "next"
 
   + [*] next [*]
   - {topic=1}{@help}
 
-  + (home|lobby)
-	- {topic=lobby}{@lobby}
-
-  + id *
-  - {topic=<star>}{@help}
-
 < topic
 
-> topic 1
+> topic 1 inherits base
 
   + help
-  - id 1 - First thing's first! Let's connect your PayPal.
+  - id 1 - First thing's first! Let's connect your PayPal. Head to twitchalerts.com/dashboard/donation-settings\s
+  ^ to get started
 
   + [*] next [*]
   - {topic=2}{@help}
 
-  + (home|lobby)
-	- {topic=lobby}{@lobby}
+< topic
 
-  + id *
-  - {topic=<star>}{@help}
+> topic 2 inherits base
+
+  + help
+  - id 2 - Click "Connect" in the "Donation Methods" section and enter your PayPal email address, then click "Link."\s
+  ^ Take this opportunity to customize your setup!
+
+  + [*] next [*]
+  - {topic=3}{@help}
 
 < topic
 
-> topic 2
+> topic 3 inherits base
 
   + help
-  - 2
+  - id 3 - Let's take a tour of your Dashboard! Head to twitchalerts.com/dashboard -\s
+  ^ I know it's pretty sparse at the moment, but that will change soon!\s
+  ^ We help you track your stats for you over time to help keep you organized!
 
-  + (home|lobby)
-	- {topic=lobby}{@lobby}
+  + [*] next [*]
+  - {topic=4}{@help}
 
-  + id *
-  - {topic=<star>}{@help}
+< topic
+
+> topic 4 inherits base
+
+  + help
+  - id 4 - in the upper-right, you can organize your data by day, week, and year!\s
+  ^ You can also view your subscriber, follower, and donation data. Keep in mind that we can\s
+  ^ only track certain information when the application is live.
+
+  + [*] next [*]
+  - {topic=5}{@help}
+
+< topic
+
+> topic 5 inherits base
+
+  + help
+  - id 5 - Now that you know where to check out your information, here's how you can get things moving!\s
+  ^ Head to your Alert box page at http://www.twitchalerts.com/dashboard/alert-box-v3 - then tell me if you use\s
+  ^ "OBS" or "XSplit" - You can also ask me any questions you have about the Alert Box:
+
+  + [*] (obs|open broadcast software|open broadcaster software) [classic]
+	- Check out our tutorial for OBS Classic at youtube.com/watch?v=JvX5rpEMeew
+
+	+ [*] (obs|open broadcast software|open broadcaster software) studio [*]
+	- Check out our tutorial for OBS Studio at youtube.com/watch?v=yffHVAPHR2w
+
+	+ [*] xsplit [*]
+	- Check out our tutorial for XSplit at youtube.com/watch?v=w058zjHfAW0
+
+	+ [*] (test|tests|donation|donations|follow|follows|follower|followers|sub|subs|subscription|subscriptions|subscriber|subscribers|donation|donations|host|hosts) [*]
+	- You can send test alerts for follows, subscriptions, donations, and hosts\s
+	^ from your dashboard - Your widget must be open for this to work (click "Launch" on the dashboard).\s
+	^ Type in your streaming software (OBS Classic/Studio, Xsplit) if you'd like more information:\s
+
+	+ [*] (media|share|video|sharing) [*]
+	- For a full explanation of media sharing, check out youtube.com/watch?v=aJKzVXnY5DU -\s
+	^ You can set a minimum donation amount, volume, price per second, and max\s
+	^ duration of the media being played. Don't worry, you can always skip a clip\s
+	^ if you'd like!
+
+  + [*] next [*]
+  - {topic=6}{@help}
+
+< topic
+
+> topic 6 inherits base
+
+  + help
+  - id 6 - If you have more specific questions about the Alert Box page, say "id 5" and I can answer better from there.\s
+  ^ From this page, you can customize your alerts for follows, subs, donations, and even hosts! This is also where you\s
+  ^ send test alerts to make sure your setup is correct!
+
+  + [*] next [*]
+  - {topic=7}{@help}
+
+< topic
+
+> topic 7 inherits base
+
+  + help
+  - id 7 - Let's set up a Donation Goal! Head to twitchalerts.com/dashboard/donation-goal -\s
+  ^ once you fill out the basic information, you can personalize the widget (what will show up on screen)\s
+  ^ by going to twitchalerts.com/dashboard/donation-goal
+
+  + [*] next [*]
+  - {topic=8}{@help}
+
+< topic
+
+> topic 8 inherits base
+
+  + help
+  - id 8 - We can customize our donation goal's layout, settings, and colors. This part\s
+  ^ is pretty basic!
+
+  + [*] next [*]
+  - {topic=9}{@help}
+
+< topic
+
+> topic 9 inherits base
+
+  + help
+  - id 9 - We can customize our donation goal's layout, settings, and colors. This part\s
+  ^ is pretty basic!
+
+  + [*] next [*]
+  - {topic=10}{@help}
 
 < topic
