@@ -12,7 +12,6 @@ from threading import Thread
 import src.lib.rive as rive
 from src.config.config import config
 from src.lib.irc import IRC
-from src.models.model import Channel, Message, User, Command
 
 reload(sys)
 sys.setdefaultencoding("utf8")
